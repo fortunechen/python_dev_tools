@@ -4,7 +4,7 @@ def setup_logging(dir):
 
     ch = logging.StreamHandler(stream=sys.stdout)
     ch.setLevel(logging.INFO)
-    formatter = logging.Formatter("[%(levelname)s: %(asctime)s, %(filename)s] %(message)s")
+    formatter = logging.Formatter("[%(levelname)s: %(asctime)s, %(filename)s, %(funcName)s] %(message)s")
     ch.setFormatter(formatter)
     logger.addHandler(ch)
 
